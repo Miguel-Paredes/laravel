@@ -1,0 +1,36 @@
+Crear proyecto en laravel
+    composer create-project laravel/laravel (nombre proyecto)
+Instalar de manera global laravel
+    composer global require laravel/installer
+Crear nuevo proyecto
+    laravel new (nombre proyecto)
+    siguiente
+    siguiente
+    no
+    mysql o mariadb
+    yes
+Alzar servidor
+    php artisan serve
+Migraciones/migrations
+crea las tablas del principio
+    php artisan migrate
+Crear nueva tabla
+    php artisan make:migration (create_nombre_table (el nombre va en plural))
+Agregar las nuevas tablas creadas
+    php artisan migrate
+Hacer un control z en las migraciones
+    php artisan migrate:rollback
+    - luego
+    php artisan migrate
+Reiniciar todas las migraciones
+    php artisan migrate:reset
+Hacer control z hasta un en especifico batch 
+    php artisan migrate:rollback --batch=(numero)
+Volver a crear todas las tablas desde 0
+    php artisan migrate:refresh
+Actualizar la informacion de una tabla (se puede usar pero mejor el rollback)
+    php artisan make:migration (update_nombre_table (nombre es el nombre de la tabla de la que se va a actualizar))
+Crear modelo
+    php artisan make:model (primera en mayuscula y el resto en singular)
+Crear modelo y migracion
+    php artisan make:model (primera en mayuscula y el resto en singular) --migration
